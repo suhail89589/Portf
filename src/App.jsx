@@ -1,35 +1,31 @@
 import React from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import About from "./components/About";
+import CurrentlyBuilding from "./components/CurrentlyBuilding";
+import Projects from "./components/Projects";
+import Achievements from "./components/Achievements";
+import Skills from "./components/Skills";
+import BuildTogetherSection from "./components/BuildTogetherSection";
 import Footer from "./components/Footer";
 
-// A simple SmoothScroll wrapper or CSS scroll-behavior: smooth is recommended
 import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 selection:bg-blue-500 selection:text-white">
-      {/* 1. Navigation */}
+    <div className="min-h-screen bg-[#050505] selection:bg-zinc-800 selection:text-white">
       <Nav />
 
       <main>
-        {/* 2. Hero Section - Entry Point */}
         <Hero />
-
-        {/* 3. Skills Section - Technical Proof */}
-        <Skills />
-
-        {/* 4. Projects Section - Case Studies */}
-        <Projects />
-
-        {/* 5. About Section - Personality & Mindset */}
         <About />
+        <CurrentlyBuilding />
+        <Projects />
+        <Achievements />
+        <Skills />
+        <BuildTogetherSection />
       </main>
 
-      {/* 6. Footer - Final Connect & Links */}
       <Footer />
     </div>
   );

@@ -1,47 +1,51 @@
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Github, ArrowUpRight, Globe } from "lucide-react";
+import { motion } from "framer-motion";
+import { Github, ArrowUpRight, Globe, Zap, Target, Activity, Code } from "lucide-react";
+
+// Asset Import
 import image3 from "../assets/image3.png";
-
 import image2 from "../assets/image2.png";
+import image5 from "../assets/image5.png"; 
 
-import image5 from "../assets/image5.png";
 const projects = [
   {
     title: "Brofessor AI",
     category: "AI & Education",
     tagline: "Your Personal AI Professor.",
-    description:
-      "An AI-powered study assistant using RAG architecture to provide hyper-personalized learning paths from academic documents.",
+    problem: "Students struggle to get hyper-personalized learning paths from standard academic documents.",
+    solution: "Developed an AI-powered study assistant utilizing RAG architecture to parse and understand complex materials.",
+    outcome: "Provides interactive, context-aware tutoring directly from the student's uploaded documents.",
     tech: ["React.js", "Groq API", "Tailwind", "RAG"],
-    image: image3, // Replace with your image3
+    image: image3,
     github: "https://github.com/suhail89589/Brofessor.Ai",
-    live: "https://brofessor-ai.vercel.app/",
+    live: "https://brofessor-ai-frontend.vercel.app",
     color: "#3b82f6",
-  },
-  {
-    title: "Vox-Tutor",
-    category: "Accessibility Tech",
-    tagline: "Voice-First AI Tutor",
-    description:
-      "A specialized assistant for the visually impaired, featuring real-time StS integration to break digital learning barriers.",
-    tech: ["Node.js", "Deepgram", "Web Speech API", "MongoDB"],
-    image: image2, // Replace with your image2
-    github: "https://github.com/suhail89589/Vox-Mvp",
-    live: "https://vox-mvp.vercel.app/",
-    color: "#10b981",
   },
   {
     title: "Step2Campus",
     category: "Edtech Platform",
     tagline: "JEE/NEET Mentorship",
-    description:
-      "Connecting aspirants with college seniors based on real-time rank data and counseling analytics.",
+    problem: "Aspirants lack direct data-driven mentorship and struggle with counseling analytics.",
+    solution: "Built a platform connecting aspirants with college seniors based on real-time rank data.",
+    outcome: "Active platform facilitating better decision making for JEE/NEET candidates.",
     tech: ["Node.js", "React.js", "Tailwindcss", "MongoDB"],
-    image: image5, // Replace with your image5
+    image: image5, 
     github: "https://github.com/suhail89589/Step2Campus",
     live: "https://github.com/suhail89589/Step2Campus",
     color: "#f59e0b",
+  },
+  {
+    title: "Vox-Tutor",
+    category: "Accessibility Tech",
+    tagline: "Voice-First AI Tutor",
+    problem: "Digital learning platforms often create barriers for the visually impaired.",
+    solution: "Designed a specialized assistant featuring real-time Speech-to-Speech (StS) integration.",
+    outcome: "Successfully broke digital learning barriers, creating an inclusive learning environment.",
+    tech: ["Node.js", "Deepgram", "Web Speech API", "MongoDB"],
+    image: image2,
+    github: "https://github.com/suhail89589/Vox-Mvp",
+    live: "https://vox-mvp.vercel.app/",
+    color: "#10b981",
   },
 ];
 
@@ -57,7 +61,7 @@ const ProjectCard = ({ project, index }) => {
       className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 lg:gap-20 items-center`}
     >
       {/* Visual Side */}
-      <div className="w-full lg:w-[60%] group relative">
+      <div className="w-full lg:w-[50%] group relative">
         <motion.div
           whileHover={{ y: -10 }}
           className="relative aspect-video overflow-hidden rounded-2xl border border-zinc-800/50 bg-zinc-900 shadow-2xl"
@@ -88,61 +92,73 @@ const ProjectCard = ({ project, index }) => {
             </a>
           </div>
         </motion.div>
-
-        {/* Floating Tech Badges (Desktop Only) */}
-        <div
-          className={`hidden lg:flex absolute -bottom-4 ${isEven ? "-right-4" : "-left-4"} flex-wrap gap-2 max-w-[200px]`}
-        >
-          {project.tech.slice(0, 2).map((t) => (
-            <span
-              key={t}
-              className="px-4 py-2 bg-zinc-950 border border-zinc-800 text-[10px] font-bold text-white uppercase tracking-widest rounded-lg shadow-xl"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
       </div>
 
       {/* Content Side */}
-      <div className="w-full lg:w-[40%] space-y-6">
-        <div className="space-y-2">
+      <div className="w-full lg:w-[50%] space-y-8">
+        <div className="space-y-3">
           <div className="flex items-center gap-2">
             <span className="h-px w-8 bg-zinc-800" />
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">
               {project.category}
             </span>
           </div>
-          <h3 className="text-4xl md:text-5xl font-bold text-white leading-none">
+          <h3 className="text-4xl md:text-5xl font-bold text-white leading-none tracking-tight">
             {project.title}
           </h3>
+          <p className="text-xl text-zinc-400 font-medium">{project.tagline}</p>
         </div>
 
-        <p className="text-zinc-400 text-lg font-medium leading-snug">
-          {project.tagline}
-        </p>
+        {/* Breakdown section */}
+        <div className="space-y-4 bg-zinc-900/30 p-6 rounded-2xl border border-zinc-800/50">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <Target size={14} className="text-red-400" />
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">The Problem</span>
+            </div>
+            <p className="text-zinc-500 text-sm leading-relaxed">{project.problem}</p>
+          </div>
+          
+          <div className="h-px w-full bg-zinc-800/50" />
 
-        <p className="text-zinc-500 text-base leading-relaxed">
-          {project.description}
-        </p>
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <Code size={14} className="text-amber-400" />
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">The Solution</span>
+            </div>
+            <p className="text-zinc-500 text-sm leading-relaxed">{project.solution}</p>
+          </div>
 
-        <div className="flex flex-wrap gap-2 pb-4">
+          <div className="h-px w-full bg-zinc-800/50" />
+
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <Activity size={14} className="text-emerald-400" />
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">The Outcome</span>
+            </div>
+            <p className="text-zinc-500 text-sm leading-relaxed">{project.outcome}</p>
+          </div>
+        </div>
+
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-2">
           {project.tech.map((t) => (
             <span
               key={t}
-              className="text-[9px] font-bold text-zinc-600 border border-zinc-900 px-2 py-1 rounded-md uppercase"
+              className="text-[10px] font-bold text-zinc-400 border border-zinc-800 bg-zinc-900/50 px-3 py-1.5 rounded-full uppercase tracking-wider"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <div className="flex items-center gap-6">
+        {/* Links */}
+        <div className="flex items-center gap-6 pt-2">
           <a
             href={project.live}
             className="group relative inline-flex items-center gap-2 text-sm font-bold text-white overflow-hidden"
           >
-            <span>Live Experience</span>
+            <span>Live Project</span>
             <div className="relative overflow-hidden w-4 h-4">
               <Globe
                 size={16}
@@ -153,7 +169,7 @@ const ProjectCard = ({ project, index }) => {
                 className="absolute top-full left-0 transition-transform duration-300 group-hover:-translate-y-full text-blue-400"
               />
             </div>
-            <span className="absolute bottom-0 left-0 w-0 h-px bg-blue-500 group-hover:w-full transition-all duration-300" />
+            <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
           </a>
 
           <a
@@ -161,7 +177,7 @@ const ProjectCard = ({ project, index }) => {
             className="flex items-center gap-2 text-sm font-bold text-zinc-500 hover:text-white transition-colors"
           >
             <Github size={18} />
-            <span>Source</span>
+            <span>Source Code</span>
           </a>
         </div>
       </div>
@@ -171,35 +187,34 @@ const ProjectCard = ({ project, index }) => {
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="bg-[#050505] py-24 md:py-40">
+    <section id="projects" className="bg-[#050505] py-24 md:py-40 border-t border-zinc-900/50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Modern Header Layout */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-8">
-          <div className="max-w-xl">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+          <div className="max-w-2xl">
             <h2 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none mb-6">
-              FEATURED <br />
-              <span className="text-zinc-800 outline-text">PROJECTS</span>
+              SHIPPED <br />
+              <span className="text-zinc-800 outline-text">PRODUCTS</span>
             </h2>
             <p className="text-zinc-500 text-lg">
-              A collection of intent-driven digital products where engineering
-              meets intuition.
+              A track record of taking complex problems and engineering robust, scalable solutions. Not just code — real products.
             </p>
           </div>
-          <div className="text-right">
+          <div className="text-right hidden md:block">
             <span className="text-[100px] font-black text-zinc-900 leading-none select-none">
               03
             </span>
           </div>
         </div>
 
-        <div className="space-y-48">
+        <div className="space-y-32">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .outline-text {
           -webkit-text-stroke: 1px #27272a;
           color: transparent;
