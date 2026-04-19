@@ -1,21 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, ArrowUpRight, Globe, Zap, Target, Activity, Code } from "lucide-react";
+import {
+  Github,
+  ArrowUpRight,
+  Globe,
+  Zap,
+  Target,
+  Activity,
+  Code,
+} from "lucide-react";
 
 // Asset Import
 import image3 from "../assets/image3.png";
 import image2 from "../assets/image2.png";
-import image5 from "../assets/image5.png"; 
-import image9 from "../assets/image9.png"; 
+import image5 from "../assets/image5.png";
+import image9 from "../assets/image9.png";
 
 const projects = [
   {
     title: "Brofessor AI",
     category: "AI & Education",
     tagline: "Your Personal AI Professor.",
-    problem: "Students struggle to get hyper-personalized learning paths from standard academic documents.",
-    solution: "Developed an AI-powered study assistant utilizing RAG architecture to parse and understand complex materials.",
-    outcome: "Provides interactive, context-aware tutoring directly from the student's uploaded documents.",
+    problem:
+      "Students struggle to get hyper-personalized learning paths from standard academic documents.",
+    solution:
+      "Developed an AI-powered study assistant utilizing RAG architecture to parse and understand complex materials.",
+    outcome:
+      "Provides interactive, context-aware tutoring directly from the student's uploaded documents.",
     tech: ["React.js", "Groq API", "Tailwind", "RAG"],
     image: image3,
     github: "https://github.com/suhail89589/Brofessor.Ai",
@@ -26,35 +37,44 @@ const projects = [
     title: "Step2Campus",
     category: "Edtech Platform",
     tagline: "JEE/NEET Mentorship",
-    problem: "Aspirants lack direct data-driven mentorship and struggle with counseling analytics.",
-    solution: "Built a platform connecting aspirants with college seniors based on real-time rank data.",
-    outcome: "Active platform facilitating better decision making for JEE/NEET candidates.",
+    problem:
+      "Aspirants lack direct data-driven mentorship and struggle with counseling analytics.",
+    solution:
+      "Built a platform connecting aspirants with college seniors based on real-time rank data.",
+    outcome:
+      "Active platform facilitating better decision making for JEE/NEET candidates.",
     tech: ["Node.js", "React.js", "Tailwindcss", "MongoDB"],
-    image: image5, 
+    image: image5,
     github: "https://github.com/suhail89589/Step2Campus",
     live: "https://github.com/suhail89589/Step2Campus",
     color: "#f59e0b",
   },
   {
-  title: "PM.Cafe",
-  category: "Luxury Dining Experience",
-  tagline: "Where Heritage Meets Contemporary",
-  problem: "Traditional restaurant sites often fail to translate the physical ambiance into a digital space, leading to a disconnected brand experience.",
-  solution: "Developed a high-performance, GSAP-driven visual experience focusing on architectural typography, parallax storytelling, and a seamless inquiry flow.",
-  outcome: "A sophisticated digital presence that reduced bounce rates and increased private event inquiries through immersive motion design.",
-  tech: ["React.js", "GSAP", "Tailwind CSS", "Framer Motion"],
-  image: image9, // This would be the preview of our new image-less layout
-  github: "https://github.com/suhail89589/PM.Cafe",
-  live: "https://pm-cafe.vercel.app/", 
-  color: "#a37a5c", // Matching your 'cafe-brown' brand color
-},
+    title: "PM.Cafe",
+    category: "Luxury Dining Experience",
+    tagline: "Where Heritage Meets Contemporary",
+    problem:
+      "Traditional restaurant sites often fail to translate the physical ambiance into a digital space, leading to a disconnected brand experience.",
+    solution:
+      "Developed a high-performance, GSAP-driven visual experience focusing on architectural typography, parallax storytelling, and a seamless inquiry flow.",
+    outcome:
+      "A sophisticated digital presence that reduced bounce rates and increased private event inquiries through immersive motion design.",
+    tech: ["React.js", "GSAP", "Tailwind CSS", "Framer Motion"],
+    image: image9, // This would be the preview of our new image-less layout
+    github: "https://github.com/suhail89589/PM.Cafe",
+    live: "https://pm-cafe.vercel.app/",
+    color: "#a37a5c", // Matching your 'cafe-brown' brand color
+  },
   {
     title: "Vox-Tutor",
     category: "Accessibility Tech",
     tagline: "Voice-First AI Tutor",
-    problem: "Digital learning platforms often create barriers for the visually impaired.",
-    solution: "Designed a specialized assistant featuring real-time Speech-to-Speech (StS) integration.",
-    outcome: "Successfully broke digital learning barriers, creating an inclusive learning environment.",
+    problem:
+      "Digital learning platforms often create barriers for the visually impaired.",
+    solution:
+      "Designed a specialized assistant featuring real-time Speech-to-Speech (StS) integration.",
+    outcome:
+      "Successfully broke digital learning barriers, creating an inclusive learning environment.",
     tech: ["Node.js", "Deepgram", "Web Speech API", "MongoDB"],
     image: image2,
     github: "https://github.com/suhail89589/Vox-Mvp",
@@ -128,19 +148,27 @@ const ProjectCard = ({ project, index }) => {
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Target size={14} className="text-red-400" />
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">The Problem</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">
+                The Problem
+              </span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">{project.problem}</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              {project.problem}
+            </p>
           </div>
-          
+
           <div className="h-px w-full bg-zinc-800/50" />
 
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Code size={14} className="text-amber-400" />
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">The Solution</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">
+                The Solution
+              </span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">{project.solution}</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              {project.solution}
+            </p>
           </div>
 
           <div className="h-px w-full bg-zinc-800/50" />
@@ -148,9 +176,13 @@ const ProjectCard = ({ project, index }) => {
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Activity size={14} className="text-emerald-400" />
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">The Outcome</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">
+                The Outcome
+              </span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">{project.outcome}</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              {project.outcome}
+            </p>
           </div>
         </div>
 
@@ -201,7 +233,10 @@ const ProjectCard = ({ project, index }) => {
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="bg-[#050505] py-24 md:py-40 border-t border-zinc-900/50">
+    <section
+      id="projects"
+      className="bg-[#050505] py-24 md:py-40 border-t border-zinc-900/50"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Modern Header Layout */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
@@ -211,7 +246,8 @@ const ProjectSection = () => {
               <span className="text-zinc-800 outline-text">PRODUCTS</span>
             </h2>
             <p className="text-zinc-500 text-lg">
-              A track record of taking complex problems and engineering robust, scalable solutions. Not just code — real products.
+              A track record of taking complex problems and engineering robust,
+              scalable solutions. Not just code — real products.
             </p>
           </div>
           <div className="text-right hidden md:block">
