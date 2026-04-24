@@ -78,7 +78,7 @@ const projects = [
     tech: ["Node.js", "Deepgram", "Web Speech API", "MongoDB"],
     image: image2,
     github: "https://github.com/suhail89589/Vox-Mvp",
-    live: "https://vox-mvp.vercel.app/",
+    live: "https://youtu.be/jjQtbliik6s",
     color: "#10b981",
   },
 ];
