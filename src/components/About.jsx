@@ -1,35 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Trophy,
-  Rocket,
-  Code2,
-  Lightbulb,
-  ArrowRight,
-  Zap,
-  Sparkles,
-} from "lucide-react";
+import { Brain, FlaskConical, Rocket, Sparkles, Cpu } from "lucide-react";
 
 const builderStats = [
   {
-    icon: <Rocket size={20} />,
-    title: "Founder Mindset",
-    desc: "I treat side-projects like start-ups. No tutorials, just building.",
-    tag: "Approach",
+    icon: <Brain size={20} />,
+    title: "Research Driven",
+    desc: "Every project starts by reading papers, understanding the mathematical foundations, and studying existing codebases before implementation.",
+    tag: "Mindset",
     accent: "from-blue-500/20 to-transparent",
   },
   {
-    icon: <Code2 size={20} />,
-    title: "Shipped Real Products",
-    desc: "From AI Tutors to Agentic AI Applications, I build things people actually use.",
+    icon: <Cpu size={20} />,
+    title: "Engineering First",
+    desc: "I translate concepts into running code by building AI applications, retrieval pipelines, and backend servers.",
     tag: "Execution",
     accent: "from-emerald-500/20 to-transparent",
   },
   {
-    icon: <Lightbulb size={20} />,
-    title: "Always Exploring",
-    desc: "Currently deep diving into AI-agents, SaaS architectures, and Problem Solving.",
-    tag: "Curiosity",
+    icon: <Rocket size={20} />,
+    title: "Long-Term Vision",
+    desc: "Growing Divergix Labs as an independent space to experiment with agentic concepts, decision intelligence, and open-source software.",
+    tag: "Mission",
     accent: "from-purple-500/20 to-transparent",
   },
 ];
@@ -41,8 +33,9 @@ const About = () => {
       className="py-24 md:py-40 bg-[#050505] text-zinc-400 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-          {/* --- Left: The Narrative --- */}
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
+          {/* LEFT */}
+
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -50,79 +43,128 @@ const About = () => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-3 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50">
+              {/* Badge */}
+
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/40">
                 <Sparkles size={14} className="text-blue-400" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400">
-                  The Builder Story
+
+                <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-zinc-400">
+                  AI ENGINEERING & EXPLORATION
                 </span>
               </div>
 
-              <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-[0.9]">
-                I learn by <br />
-                <span className="text-zinc-700">breaking things.</span>
+              {/* Heading */}
+
+              <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-[0.92] text-white">
+                From curiosity
+                <br />
+                <span className="text-zinc-700">to intelligent systems.</span>
               </h2>
 
-              <div className="space-y-6 text-lg md:text-xl leading-relaxed text-zinc-400 max-w-2xl">
+              {/* Story */}
+
+              <div className="space-y-6 text-lg leading-relaxed max-w-2xl">
                 <p>
-                  I'm a first-year student, but I don't really operate like one. I realized early on that watching tutorials wasn't going to get me anywhere. So, I just started building.
+                  I'm currently pursuing a BS in Data Science at IIT Madras, building my foundations in machine learning, mathematics, and computer science.
                 </p>
 
-                {/* Glassmorphism Quote Box */}
-                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-zinc-900/80 to-zinc-950 border border-zinc-800/50 shadow-2xl overflow-hidden mt-8 mb-8">
-                  <div className="absolute top-0 right-0 p-6 text-zinc-800/20">
-                    <Zap size={100} strokeWidth={1} />
+                <p>
+                  I prioritize learning by building AI applications, experimenting with local LLMs, backend systems, retrieval pipelines, and research-driven software. I believe in concrete prototypes over theoretical speculation, proving concepts through running code.
+                </p>
+
+                {/* Quote */}
+
+                <div className="relative rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900/80 to-zinc-950 p-8 overflow-hidden">
+                  <div className="absolute right-6 top-6 text-zinc-800/20">
+                    <FlaskConical size={90} strokeWidth={1} />
                   </div>
+
                   <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
-                      <h3 className="text-sm font-bold text-zinc-200 uppercase tracking-widest">
-                        MY MINDSET
-                      </h3>
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+
+                      <span className="uppercase tracking-[0.25em] text-xs font-bold text-zinc-400">
+                        MY PHILOSOPHY
+                      </span>
                     </div>
-                    <p className="text-white italic font-light text-xl md:text-2xl leading-snug">
-                      "Ideas are cheap. Execution is everything. I build to solve actual problems, not just to add a line to my resume."
+
+                    <p className="text-2xl text-white italic font-light leading-relaxed">
+                      "The best way to understand intelligent systems isn't by
+                      reading about them—it's by building them."
                     </p>
                   </div>
                 </div>
 
-                <p className="text-base text-zinc-500">
-                  Right now, my obsession is at the crossroads of <span className="text-zinc-200">Agentic AI, Startups, Scalable</span>. Whether it's an AI tutor that adapts to how you learn, or a marketplace platform, I'm always chasing the next hard problem to solve. 
+                <p>
+                  This mindset drove the creation of
+                  <span className="text-white font-medium"> Divergix Labs</span>
+                  —an independent space where I experiment with local language models, retrieval pipelines, and backend infrastructure.
                 </p>
+              </div>
+
+              {/* Research Interests */}
+              <div className="pt-8 border-t border-zinc-900/80">
+                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-6">
+                  Research Interests
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Machine Learning",
+                    "Large Language Models",
+                    "Agentic Systems",
+                    "Decision Intelligence",
+                    "Reinforcement Learning",
+                    "AI Infrastructure",
+                    "Human-AI Interaction",
+                  ].map((interest) => (
+                    <span
+                      key={interest}
+                      className="text-xs font-bold text-zinc-300 border border-zinc-850 bg-zinc-900/20 px-4 py-2 rounded-full tracking-wide hover:border-zinc-700 transition-colors"
+                    >
+                      {interest}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
 
-          {/* --- Right: The Bento Stats --- */}
-          <div className="lg:col-span-5 flex flex-col justify-center gap-4">
-            {builderStats.map((item, i) => (
-               <motion.div
-               key={i}
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ delay: i * 0.1 }}
-               viewport={{ once: true }}
-               className={`relative group p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 hover:bg-zinc-900/60 transition-all duration-500 overflow-hidden`}
-             >
-               {/* Accent Gradient */}
-               <div
-                 className={`absolute inset-0 bg-gradient-to-r ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-               />
+          {/* RIGHT */}
 
-               <div className="relative z-10 flex items-center gap-6">
-                 <div className="p-4 bg-zinc-950 border border-zinc-800 rounded-2xl text-white group-hover:scale-110 group-hover:border-zinc-700 transition-all shadow-lg">
-                   {item.icon}
-                 </div>
-                 <div>
-                   <span className="text-[10px] font-black uppercase tracking-widest text-zinc-600 mb-1 block">
-                     {item.tag}
-                   </span>
-                   <h4 className="text-xl font-bold text-white leading-tight mb-1">
-                     {item.title}
-                   </h4>
-                   <p className="text-sm text-zinc-500">{item.desc}</p>
-                 </div>
-               </div>
-             </motion.div>
+          <div className="lg:col-span-5 flex flex-col justify-center gap-5">
+            {builderStats.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/30 p-7 hover:bg-zinc-900/60 transition-all duration-500"
+              >
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity`}
+                />
+
+                <div className="relative z-10 flex gap-5">
+                  <div className="p-4 rounded-2xl border border-zinc-800 bg-zinc-950 text-white group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+
+                  <div>
+                    <span className="block text-[10px] uppercase tracking-[0.25em] font-bold text-zinc-600 mb-2">
+                      {item.tag}
+                    </span>
+
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm leading-relaxed text-zinc-500">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>

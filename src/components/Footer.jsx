@@ -62,14 +62,14 @@ const Footer = () => {
       className="bg-[#050505] pt-16 pb-12 border-t border-zinc-900 relative scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 pb-16">
-          <div className="md:col-span-4 space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16">
+          <div className="md:col-span-3 space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-black text-white tracking-tighter uppercase">
                 SUHAIL<span className="text-zinc-700">.</span>
               </h3>
-              <p className="text-zinc-500 text-base leading-relaxed">
-                Early-stage builder exploring AI, SaaS, and product design. Obsessed with execution.
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                AI Engineering student at IIT Madras and founder of Divergix Labs. Building software systems that learn, reason, and solve real-world problems.
               </p>
             </div>
             <div className="flex items-center gap-2 text-zinc-600">
@@ -81,6 +81,34 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-3 space-y-6">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-700">
+              Currently Exploring
+            </h4>
+            <ul className="space-y-3 text-xs text-zinc-500 font-bold">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-800 rounded-full" />
+                Retrieval-Augmented Generation
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-800 rounded-full" />
+                Agentic AI Systems
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-800 rounded-full" />
+                Reinforcement Learning
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-800 rounded-full" />
+                FastAPI & PyTorch
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-zinc-800 rounded-full" />
+                Prompt Engineering
+              </li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2 space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-700">
               Socials
             </h4>
@@ -103,7 +131,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="md:col-span-3 space-y-6">
+          <div className="md:col-span-2 space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-700">
               Coding
             </h4>
@@ -132,7 +160,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <p className="text-sm text-zinc-500">
-                Open for new opportunities
+                Open for opportunities
               </p>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/5 border border-emerald-500/20 text-emerald-500 text-[9px] font-black uppercase tracking-tighter">
                 <span className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />

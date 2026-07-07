@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   const RESUME_PATH =
-    "https://drive.google.com/file/d/1-W2GqzRLhJqofSHhWLtsrB7r99uGuB4p/view?usp=drive_link";
+    "https://drive.google.com/file/d/1YPGW9-kIDg-taizQ8V-OuJn_UQELUMQe/view?usp=drive_link";
 
   return (
     <>

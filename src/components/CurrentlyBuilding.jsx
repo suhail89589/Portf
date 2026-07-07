@@ -2,43 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Activity, Cpu, Cloud, X } from "lucide-react";
 
-// 1. Data Structure with Storytelling expansion
 const activeProjects = [
   {
-    id: "autism-therapist",
-    title: "Agentic AI Autism Therapist",
-    category: "AI × EdTech",
-    status: "Research & Exploration",
-    desc: "Building a context-aware agentic AI system that adapts to children on the autism spectrum, delivering real-time, personalized guidance.",
-    icon: <Cpu size={22} />,
-    theme: {
-      text: "text-emerald-400",
-      bg: "bg-emerald-500",
-      borderHover: "hover:border-emerald-500/50",
-      gradient: "from-emerald-500/20 to-transparent",
-      glowBg: "bg-emerald-500/20",
-    },
-    whyBuilding:
-      "Children on the autism spectrum often struggle with generalized educational tools. There is a strong need for patient, highly adaptable, and personalized AI that can guide them at their own pace without overwhelming them.",
-    whatBuilding:
-      "An AI-powered application featuring a context-aware agent designed to interact, understand behavioral nuances, and offer gentle nudges and therapies tailored specifically for neurodivergent children.",
-    techApproach: [
-      "Large Language Models for dynamic conversation",
-      "Sentiment and context tracking",
-      "React + Tailwind for accessible UI",
-      "FastAPI backend for low-latency logic",
-    ],
-    challenges:
-      "Ensuring the AI remains perfectly safe, predictable in tone, and genuinely helpful rather than frustrating. It requires stringent prompt guardrails and robust continuous context memory.",
-    vision:
-      "To become a staple supportive companion for neurodivergent children, helping them navigate emotional regulation and learning safely alongside human therapists.",
-  },
-  {
-    id: "agent-workflow",
-    title: "Agent Workflow Engine",
-    category: "AI Systems",
-    status: "Prototyping",
-    desc: "Designing a modular agent orchestration system for multi-step reasoning and automation.",
+    id: "researching",
+    title: "Researching",
+    category: "AI Research",
+    status: "Daily Exploration",
+    desc: "Studying the mathematical foundations of machine learning, reading recent research, and experimenting with decision intelligence structures.",
     icon: <Cpu size={22} />,
     theme: {
       text: "text-blue-400",
@@ -49,32 +19,36 @@ const activeProjects = [
     },
 
     whyBuilding:
-      "Most AI applications today rely on single-step prompts, limiting their ability to handle complex, multi-step reasoning. There is a need for systems that can coordinate multiple agents and workflows dynamically.",
+      "AI is moving fast. My focus is on studying the mathematical foundations and reproducing core concepts in neural networks and retrieval systems through hands-on implementation.",
 
     whatBuilding:
-      "A modular agent orchestration engine that enables chaining, routing, and managing multiple AI agents to perform structured tasks such as reasoning, planning, and execution.",
+      "Reading papers on LLM optimization, experimenting with simple reinforcement learning loops, and testing custom architectures on local setups.",
 
     techApproach: [
-      "LLM-based agents with role specialization",
-      "Task routing and workflow pipelines",
-      "Memory management for multi-step reasoning",
-      "FastAPI backend for orchestration layer",
+      "Machine Learning",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Decision Intelligence",
+      "Mathematical Foundations",
+      "Research Papers",
     ],
 
     challenges:
-      "Maintaining context across multiple agents without losing coherence, optimizing latency for chained workflows, and designing a system that remains flexible yet predictable.",
+      "Bridging classroom theory with actual code, and keeping up with fast-changing APIs and library versions.",
 
     vision:
-      "To build a scalable foundation for agent-based systems that can power complex applications, from autonomous assistants to enterprise-level AI workflows.",
+      "Build a strong foundation in machine learning to design systems that are both mathematically sound and practically useful.",
   },
 
   {
-    id: "vox-tutor",
-    title: "Vox Tutor 2.0",
-    category: "Accessibility × AI",
-    status: "Concept Phase",
-    desc: "Designing a fully voice-driven learning system to enable hands-free interaction for accessibility-focused education.",
-    icon: <Cloud size={22} />,
+    id: "building",
+    title: "Building",
+    category: "AI Engineering",
+    status: "Active Development",
+    desc: "Developing AI-focused applications, prompt tools, and backend infrastructure through Divergix Labs.",
+
+    icon: <Activity size={22} />,
+
     theme: {
       text: "text-purple-400",
       bg: "bg-purple-500",
@@ -82,20 +56,66 @@ const activeProjects = [
       gradient: "from-purple-500/20 to-transparent",
       glowBg: "bg-purple-500/20",
     },
+
     whyBuilding:
-      "Visual-heavy educational platforms alienate visually impaired learners or those requiring physical accessibility. Education should be inherently inclusive to everyone.",
+      "Building is the best form of learning. Implementing RAG structures and local model utilities lets me test concepts and refine my backend engineering skills.",
+
     whatBuilding:
-      "A voice-first tutor platform where the primary mode of interaction—from navigation to learning and assessment—is entirely conversational and hands-free.",
+      "Developing developer tooling like Prompt Studio, RAG applications, and testing local execution pipelines.",
+
     techApproach: [
-      "Advanced Speech-to-Text (Whisper)",
-      "Natural Text-to-Speech (ElevenLabs)",
-      "React PWA capabilities",
-      "Serverless architecture for immediate scale",
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "React",
+      "SQLite",
+      "ChromaDB",
     ],
+
     challenges:
-      "Creating a seamless conversational UI that doesn't feel like a clunky phone tree structure. Dealing with ambient noise, diverse accents, and interruptions naturally.",
+      "Designing modular backend services that are easy to expand and modify as I learn new techniques.",
+
     vision:
-      "To push the boundaries of 'zero-UI' applications, ensuring anyone, regardless of physical ability, has unfettered access to high-quality tutoring.",
+      "Ship functional software that integrates machine learning models into intuitive user experiences.",
+  },
+
+  {
+    id: "learning",
+    title: "Learning",
+    category: "Continuous Growth",
+    status: "Always Improving",
+    desc: "Strengthening the mathematical, algorithmic, and backend systems foundations required to build high-quality software.",
+
+    icon: <Cloud size={22} />,
+
+    theme: {
+      text: "text-emerald-400",
+      bg: "bg-emerald-500",
+      borderHover: "hover:border-emerald-500/50",
+      gradient: "from-emerald-500/20 to-transparent",
+      glowBg: "bg-emerald-500/20",
+    },
+
+    whyBuilding:
+      "Continuous learning is the foundation of every great engineer. I'm committed to building a deep understanding of AI, mathematics, and software engineering through consistent practice.",
+
+    whatBuilding:
+      "Expanding expertise across data science, system design, databases, API design, and statistical analysis, translating coursework into real code.",
+
+    techApproach: [
+      "Data Science",
+      "PyTorch",
+      "Backend Design",
+      "System Design",
+      "Statistics",
+      "Open Source",
+    ],
+
+    challenges:
+      "Structuring my self-study effectively while keeping up with college coursework and project building.",
+
+    vision:
+      "Become a capable engineer who understands both the algorithms and the systems engineering required to run them.",
   },
 ];
 

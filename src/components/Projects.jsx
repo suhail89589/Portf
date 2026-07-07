@@ -13,73 +13,101 @@ import {
 // Asset Import
 import image3 from "../assets/image3.png";
 import image2 from "../assets/image2.png";
-import image5 from "../assets/image5.png";
+import image10 from "../assets/image10.png";
 import image9 from "../assets/image9.png";
+import image7 from "../assets/image7.png";
 
 const projects = [
   {
-    title: "Brofessor AI",
-    category: "AI & Education",
-    tagline: "Your Personal AI Professor.",
-    problem:
-      "Students struggle to get hyper-personalized learning paths from standard academic documents.",
-    solution:
-      "Developed an AI-powered study assistant utilizing RAG architecture to parse and understand complex materials.",
-    outcome:
-      "Provides interactive, context-aware tutoring directly from the student's uploaded documents.",
-    tech: ["React.js", "Groq API", "Tailwind", "RAG"],
-    image: image3,
-    github: "https://github.com/suhail89589/Brofessor.Ai",
-    live: "https://brofessor-ai-frontend.vercel.app",
-    color: "#3b82f6",
+    title: "Divergix Labs",
+    category: "Flagship Research Initiative",
+    tagline: "A personal playground for exploring agentic systems and local LLM execution.",
+    challenge:
+      "Standard LLM APIs are costly and abstract away inner mechanics. I wanted to research how model alignment, prompt constraints, and context retrieval function directly on local hardware.",
+    approach:
+      "Built a modular architecture using Python, FastAPI, and PyTorch. Integrated Ollama for local model execution and ChromaDB for retrieval-augmented workflows, testing various embedding models and caching structures.",
+    impact:
+      "Created an extensible research base that hosts multiple active prototypes, allowing quick iteration on model parameters and prompt schemas without API dependencies.",
+    tech: [
+      "Python",
+      "PyTorch",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "SQLite",
+      "ChromaDB",
+      "Ollama"
+    ],
+    image: image7,
+    github: "https://github.com/suhail89589e/Divergix-Labs",
+    live: "https://divergix-labs.vercel.app/",
+    color: "#6366f1",
   },
   {
-    title: "Step2Campus",
-    category: "Edtech Platform",
-    tagline: "JEE/NEET Mentorship",
-    problem:
-      "Aspirants lack direct data-driven mentorship and struggle with counseling analytics.",
-    solution:
-      "Built a platform connecting aspirants with college seniors based on real-time rank data.",
-    outcome:
-      "Active platform facilitating better decision making for JEE/NEET candidates.",
-    tech: ["Node.js", "React.js", "Tailwindcss", "MongoDB"],
-    image: image5,
-    github: "https://github.com/suhail89589/Step2Campus",
-    live: "https://github.com/suhail89589/Step2Campus",
+    title: "Prompt Studio",
+    category: "AI Developer Tool",
+    tagline: "Interactive playground for prompt testing and LLM response comparison.",
+    challenge:
+      "Developers lack tools to systematically test prompts against multiple open-source models side-by-side on local machines, leading to slow integration loops.",
+    approach:
+      "Engineered a React interface backed by a Node.js orchestrator that calls multiple local Ollama instances simultaneously, parsing streams and tracking latency.",
+    impact:
+      "Drastically reduced the prompt iteration cycle, enabling visual comparison of performance, output format reliability, and inference times.",
+    tech: ["React.js", "Node.js", "Express", "Ollama", "Tailwind CSS"],
+    image: image10,
+    github: "https://github.com/suhail89589/Prompt-studio",
+    
     color: "#f59e0b",
   },
   {
-    title: "PM.Cafe",
-    category: "Luxury Dining Experience",
-    tagline: "Where Heritage Meets Contemporary",
-    problem:
-      "Traditional restaurant sites often fail to translate the physical ambiance into a digital space, leading to a disconnected brand experience.",
-    solution:
-      "Developed a high-performance, GSAP-driven visual experience focusing on architectural typography, parallax storytelling, and a seamless inquiry flow.",
-    outcome:
-      "A sophisticated digital presence that reduced bounce rates and increased private event inquiries through immersive motion design.",
-    tech: ["React.js", "GSAP", "Tailwind CSS", "Framer Motion"],
-    image: image9, // This would be the preview of our new image-less layout
-    github: "https://github.com/suhail89589/PM.Cafe",
-    live: "https://pm-cafe.vercel.app/",
-    color: "#a37a5c", // Matching your 'cafe-brown' brand color
+    title: "Brofessor AI",
+    category: "AI Application",
+    tagline: "Context-aware reading assistant using document retrieval.",
+    challenge:
+      "Standard LLMs have limited context windows and lack domain knowledge for highly specialized academic documents, resulting in hallucinations.",
+    approach:
+      "Implemented a Retrieval-Augmented Generation (RAG) system utilizing PDF parsing, document chunking, and semantic searching over vector embeddings before query compilation.",
+    impact:
+      "Provides contextually accurate study assistance based strictly on uploaded documents, preventing out-of-bounds hallucinations.",
+    tech: ["React.js", "Groq API", "Tailwind", "RAG", "ChromaDB"],
+    image: image3,
+    github: "https://github.com/suhail89589/Brofessor.Ai",
+    live: "https://brofessor-ai-75zr.vercel.app/",
+    color: "#3b82f6",
   },
   {
     title: "Vox-Tutor",
-    category: "Accessibility Tech",
-    tagline: "Voice-First AI Tutor",
-    problem:
-      "Digital learning platforms often create barriers for the visually impaired.",
-    solution:
-      "Designed a specialized assistant featuring real-time Speech-to-Speech (StS) integration.",
-    outcome:
-      "Successfully broke digital learning barriers, creating an inclusive learning environment.",
-    tech: ["Node.js", "Deepgram", "Web Speech API", "MongoDB"],
+    category: "Voice AI",
+    tagline: "Real-time speech-to-speech interaction helper.",
+    challenge:
+      "Traditional voice systems rely on high-latency TTS/STT pipelines, which break the natural flow of real-time conversational assistance.",
+    approach:
+      "Designed a lightweight pipeline linking Web Speech API with streaming audio endpoints, optimizing response serialization to minimize visual and audio latency.",
+    impact:
+      "Enabled low-latency conversational feedback, making conversational interfaces accessible for audio-first tasks.",
+    tech: ["Node.js", "Deepgram", "Web Speech API", "MongoDB", "Express"],
     image: image2,
     github: "https://github.com/suhail89589/Vox-Mvp",
     live: "https://youtu.be/jjQtbliik6s",
     color: "#10b981",
+  },
+  {
+    title: "PM.Cafe",
+    category: "Product Engineering",
+    tagline: "High-performance digital storytelling for culinary spaces.",
+    challenge:
+      "Standard food/restaurant sites rely on static templates that fail to convey physical ambiance, resulting in low digital engagement.",
+    approach:
+      "Built a responsive, motion-first architecture using Framer Motion and custom CSS grid structures for fluid typography and page transitions.",
+    impact:
+      "Designed an editorial visual presence that elevates physical restaurant branding through fluid digital interaction.",
+    tech: ["React.js", "GSAP", "Tailwind CSS", "Framer Motion"],
+    image: image9,
+    github: "https://github.com/suhail89589/PM.Cafe",
+    live: "https://pro-cafe-frontend.vercel.app/",
+    color: "#a37a5c",
   },
 ];
 
@@ -117,12 +145,12 @@ const ProjectCard = ({ project, index }) => {
           {/* Overlay Link */}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/40 backdrop-blur-sm">
             <a
-              href={project.live}
+              href={(project.title === "Prompt Studio" || project.title === "Vox-Tutor") ? project.github : project.live}
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-white text-black rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
             >
-              <ArrowUpRight size={24} />
+              {(project.title === "Prompt Studio" || project.title === "Vox-Tutor") ? <Github size={24} /> : <ArrowUpRight size={24} />}
             </a>
           </div>
         </motion.div>
@@ -149,11 +177,11 @@ const ProjectCard = ({ project, index }) => {
             <div className="flex items-center gap-2 mb-1">
               <Target size={14} className="text-red-400" />
               <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">
-                The Problem
+                Challenge
               </span>
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              {project.problem}
+              {project.challenge}
             </p>
           </div>
 
@@ -163,11 +191,11 @@ const ProjectCard = ({ project, index }) => {
             <div className="flex items-center gap-2 mb-1">
               <Code size={14} className="text-amber-400" />
               <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">
-                The Solution
+                Approach
               </span>
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              {project.solution}
+              {project.approach}
             </p>
           </div>
 
@@ -177,11 +205,11 @@ const ProjectCard = ({ project, index }) => {
             <div className="flex items-center gap-2 mb-1">
               <Activity size={14} className="text-emerald-400" />
               <span className="text-xs font-bold uppercase tracking-widest text-zinc-300">
-                The Outcome
+                Impact
               </span>
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              {project.outcome}
+              {project.impact}
             </p>
           </div>
         </div>
@@ -200,30 +228,32 @@ const ProjectCard = ({ project, index }) => {
 
         {/* Links */}
         <div className="flex items-center gap-6 pt-2">
-          <a
-            href={project.live}
-            className="group relative inline-flex items-center gap-2 text-sm font-bold text-white overflow-hidden"
-          >
-            <span>Live Project</span>
-            <div className="relative overflow-hidden w-4 h-4">
-              <Globe
-                size={16}
-                className="transition-transform duration-300 group-hover:-translate-y-full"
-              />
-              <Globe
-                size={16}
-                className="absolute top-full left-0 transition-transform duration-300 group-hover:-translate-y-full text-blue-400"
-              />
-            </div>
-            <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-          </a>
+          {project.title !== "Prompt Studio" && project.title !== "Vox-Tutor" && (
+            <a
+              href={project.live}
+              className="group relative inline-flex items-center gap-2 text-sm font-bold text-white overflow-hidden"
+            >
+              <span>View Project</span>
+              <div className="relative overflow-hidden w-4 h-4">
+                <Globe
+                  size={16}
+                  className="transition-transform duration-300 group-hover:-translate-y-full"
+                />
+                <Globe
+                  size={16}
+                  className="absolute top-full left-0 transition-transform duration-300 group-hover:-translate-y-full text-blue-400"
+                />
+              </div>
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
+            </a>
+          )}
 
           <a
             href={project.github}
             className="flex items-center gap-2 text-sm font-bold text-zinc-500 hover:text-white transition-colors"
           >
             <Github size={18} />
-            <span>Source Code</span>
+            <span>GitHub</span>
           </a>
         </div>
       </div>
@@ -242,17 +272,16 @@ const ProjectSection = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none mb-6">
-              SHIPPED <br />
-              <span className="text-zinc-800 outline-text">PRODUCTS</span>
+              CASE <br />
+              <span className="text-zinc-800 outline-text">STUDIES</span>
             </h2>
             <p className="text-zinc-500 text-lg">
-              A track record of taking complex problems and engineering robust,
-              scalable solutions. Not just code — real products.
+              Engineering-focused case studies showcasing how I build and experiment with intelligent software systems.
             </p>
           </div>
           <div className="text-right hidden md:block">
             <span className="text-[100px] font-black text-zinc-900 leading-none select-none">
-              03
+              05
             </span>
           </div>
         </div>
