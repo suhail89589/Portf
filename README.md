@@ -1,16 +1,40 @@
-# React + Vite
+# ✨ Personal Portfolio | Frontend Software Engineer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for my personal engineering portfolio! This project serves as a clean, highly interactive central hub designed to showcase my full-stack web applications, technical skill set, and ongoing journey in data structures and algorithmic problem-solving.
 
-Currently, two official plugins are available:
+Built with a focus on modern user experience, modular components, and fluid visual design, this portfolio features physics-based micro-interactions and a fully responsive layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠️ Tech Stack & Libraries
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Core Framework:** React.js (Functional Components, Custom Hooks)
+*   **Styling:** Tailwind CSS (Utility-first, responsive layouts, custom design tokens)
+*   **Animation Engine:** Framer Motion (Orchestrated entry transitions, spring physics, scroll-linked reveals)
+*   **Deployment:** Vercel (Optimized production builds with global CDN distribution)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Key Frontend Features
+
+*   **Fluid Motion & Micro-Interactions:** Utilizes Framer Motion for organic page transitions, scroll-triggered section reveals, and responsive interactive elements that provide instant tactile feedback.
+*   **Dynamic Project Showcases:** A modular, data-driven gallery component displaying production-ready applications with clear architecture breakdowns, technical highlights, and direct live deployment links.
+*   **Data-Driven UI:** Projects, skills, and timelines are structured cleanly as JSON data objects, making it incredibly easy to scale, maintain, and update content dynamically.
+*   **Responsive Performance:** Implements asset lazy-loading, strict image optimization, and mobile-first responsive breakpoints to ensure rapid paint times across all devices.
+
+---
+
+## 📂 Project Structure
+
+```text
+├── public/                 # Static assets (favicons, resumes)
+├── src/
+│   ├── assets/             # Images, project screenshots, and vector graphics
+│   ├── components/         # Reusable structural UI components (Navbar, ProjectCard)
+│   ├── data/               # Static data stores (projects.js, skills.js for quick scaling)
+│   ├── styles/             # Tailwind configuration and custom base CSS layers
+│   ├── App.jsx             # Main application entry and page assembly
+│   └── main.jsx            # React client DOM initialization
+├── index.html
+├── tailwind.config.js      # Custom theme configurations (colors, animation speeds)
+└── package.json
