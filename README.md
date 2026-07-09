@@ -1,4 +1,4 @@
-# ✨ Personal Portfolio | Frontend Software Engineer
+# ✨ Personal Portfolio | AI Engineer | Data Scientist | Software Engineer
 
 Welcome to the repository for my personal engineering portfolio! This project serves as a clean, highly interactive central hub designed to showcase my full-stack web applications, technical skill set, and ongoing journey in data structures and algorithmic problem-solving.
 
